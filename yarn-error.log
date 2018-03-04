@@ -16,13 +16,13 @@ Platform:
 npm manifest: 
   {
     "name": "@pengliheng/github-report",
-    "version": "1.0.5",
+    "version": "1.1.2",
     "description": "generate a github report",
     "homepage": "https://www.pipk.top",
-    "main": "dist/index.js",
+    "main": "index.js",
     "scripts": {
       "w": "webpack -w --colors --progress",
-      "p": "webpack -p --colors --progress",
+      "p": "webpack --config webpack.config.prod.js --display-error-details --progress --colors --watch",
       "test": "echo \"Error: no test specified\" && exit 1",
       "publish": "npm publish --access=public"
     },
@@ -47,6 +47,7 @@ npm manifest:
       "lodash.sortby": "^4.7.0",
       "path": "^0.12.7",
       "react": "^16.2.0",
+      "react-dom": "^16.2.0",
       "style-loader": "^0.20.2",
       "webpack": "^4.0.1",
       "webpack-cli": "^2.0.10"
@@ -4437,6 +4438,15 @@ Lockfile:
       minimist "^1.2.0"
       strip-json-comments "~2.0.1"
   
+  react-dom@^16.2.0:
+    version "16.2.0"
+    resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
+    dependencies:
+      fbjs "^0.8.16"
+      loose-envify "^1.1.0"
+      object-assign "^4.1.1"
+      prop-types "^15.6.0"
+  
   react@^16.2.0:
     version "16.2.0"
     resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
@@ -5732,7 +5742,7 @@ Lockfile:
       yeoman-environment "^1.1.0"
 
 Trace: 
-  Error: https://registry.npmjs.org/@pengliheng%2fgithub-report: You cannot publish over the previously published versions: 1.0.5.
+  Error: https://registry.npmjs.org/@pengliheng%2fgithub-report: You cannot publish over the previously published versions: 1.1.2.
       at Request.params.callback [as _callback] (D:\Program Files\Yarn\lib\yarn-cli.js:58200:18)
       at Request.self.callback (D:\Program Files\Yarn\lib\yarn-cli.js:114242:22)
       at Request.emit (events.js:127:13)

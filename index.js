@@ -1,1 +1,1 @@
-module.exports = require('./lib/index.jsx');
+module.exports = require('./lib/react-github-calendar.js');
