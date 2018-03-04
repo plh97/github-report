@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"'use strict';\n\nmodule.exports = function isCancel(value) {\n  return !!(value && value.__CANCEL__);\n};\n"},"hash":"b128def803526ea06649b3beca16c167"}

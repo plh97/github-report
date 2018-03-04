@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./lib/index.jsx","loc":{"line":1,"column":25}}],"generated":{"js":"\"use strict\";\n\nmodule.exports = require('./lib/index.jsx');"},"hash":"fe0333470e2e817f4d1361eea4b746b6"}

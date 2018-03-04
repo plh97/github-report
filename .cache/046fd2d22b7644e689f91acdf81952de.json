@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./lib/axios","loc":{"line":1,"column":25}}],"generated":{"js":"module.exports = require('./lib/axios');"},"hash":"34f6dbe17d4a7b3b561324d0aa038329"}

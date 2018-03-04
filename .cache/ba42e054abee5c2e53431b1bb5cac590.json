@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"'use strict';\n\nmodule.exports = function(Chart) {\n\tChart.Scatter = function(context, config) {\n\t\tconfig.type = 'scatter';\n\t\treturn new Chart(context, config);\n\t};\n};\n"},"hash":"81367b3b417d8eaa05590fb2f87a8fe2"}

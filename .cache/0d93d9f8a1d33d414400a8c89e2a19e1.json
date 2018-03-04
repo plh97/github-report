@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"../helpers/index","loc":{"line":3,"column":22}}],"generated":{"js":"'use strict';\n\nvar helpers = require('../helpers/index');\n\nmodule.exports = {\n\t/**\n\t * @private\n\t */\n\t_set: function(scope, values) {\n\t\treturn helpers.merge(this[scope] || (this[scope] = {}), values);\n\t}\n};\n"},"hash":"4b97c3798e513c6c8436b31791b4e158"}
