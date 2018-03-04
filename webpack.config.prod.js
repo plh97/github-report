@@ -24,15 +24,5 @@ module.exports = {
         // use: ['style-loader', 'css-loader']
       }
     ]
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'example')
-  },
-  plugins: [
-		new webpack.EnvironmentPlugin({
-		  NODE_ENV: 'production',
-		  access_token: 'f096866b34da0bea4eab0483465e9a9f20dfc3d5',
-		  DEBUG: false,
-		}),
-  	]
+  }
 };
