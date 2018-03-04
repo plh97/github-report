@@ -1,14 +1,13 @@
 {
   "name": "@pengliheng/github-report",
-  "version": "1.1.4",
+  "version": "1.1.12",
   "description": "generate a github report",
   "homepage": "https://www.pipk.top",
   "main": "index.js",
   "scripts": {
     "w": "webpack -w --colors --progress",
     "p": "webpack --config webpack.config.prod.js --display-error-details --progress --colors --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish --access=public"
+    "build": "webpack --config webpack.config.prod.js --display-error-details --progress --colors --watch"
   },
   "repository": {
     "type": "git",

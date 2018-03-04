@@ -3,11 +3,9 @@
 [![Node.js Version](https://img.shields.io/badge/node.js-9.2.0-blue.svg)](http://nodejs.org/download)
 ![Size](https://github-size-badge.herokuapp.com/pengliheng/github-report.svg)
 
-# @pengliheng/github-report
+to generate an github report
 
-### to generate an github report
-
-- ### 1.you need to have an router `/graphql`,and i will post request to github url `https://api.github.com/graphql`, so please paste the below code to your router(`/graphql`) config,if you wana to use.
+## 1.you need to have an router `/graphql`,and i will post request to github url `https://api.github.com/graphql`, so please paste the below code to your router(`/graphql`) config,if you wana to use.
 
 ```js
 const axios = require("axios");
@@ -30,8 +28,9 @@ exports.getCode = async ctx => {
   ctx.body = await queryFunc(query);
 };
 ```
-- ### 2.generate an [github access_token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+## 2.generate an [github access_token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 - #### pay attention to avoid below thing!dont put your access token into headers,because github may think it an dangerout behave thing, and they will cancel your token immediately.
+
 ```js
 axios({
   url: "https://api.github.com/graphql",
@@ -47,7 +46,7 @@ axios({
 ```
 ![](https://cdn.suisuijiang.com/message_1520156894273.png)
 
-* ## 2.to set environment variable
+## 3.to set environment variable
 
 ```js
 // nodejs
@@ -87,7 +86,7 @@ module.exports = {
 // not sure just google/baidu
 ```
 
-- ## 3.just use it as your react component
+## 4.just use it as your react component
 
 ```jsx
 // package

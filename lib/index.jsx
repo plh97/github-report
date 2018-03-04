@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import calendar from 'github-calendar';
 import sortBy from 'lodash.sortby';
-import axios from 'axios';
 import "babel-polyfill";
 
 // local
