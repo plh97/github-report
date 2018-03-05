@@ -1,1 +1,1 @@
-module.exports = require('./lib/react-github-calendar.js');
+module.exports = require('./dist/index.js');

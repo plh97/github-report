@@ -28,8 +28,10 @@ exports.getCode = async ctx => {
   ctx.body = await queryFunc(query);
 };
 ```
+
 ## 2.generate an [github access_token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
-- #### pay attention to avoid below thing!dont put your access token into headers,because github may think it an dangerout behave thing, and they will cancel your token immediately.
+
+* #### pay attention to avoid below thing!dont put your access token into headers,because github may think it an dangerout behave thing, and they will cancel your token immediately.
 
 ```js
 axios({
@@ -44,6 +46,7 @@ axios({
   .then(res => resolve(res.data))
   .catch(err => reject(err));
 ```
+
 ![](https://cdn.suisuijiang.com/message_1520156894273.png)
 
 ## 3.to set environment variable
@@ -61,23 +64,23 @@ axios({
 
 // pm2 => create file => ecosystem.config.js
 module.exports = {
-	apps: [
-		{
-			name: "blog",
-			script: "./src/server/index.js",
-			watch: true,
-			env: {
-				"PORT": 80,
+  apps: [
+    {
+      name: "blog",
+      script: "./src/server/index.js",
+      watch: true,
+      env: {
+        "PORT": 80,
         "NODE_ENV": "dev",
         "access_token": "your personal token",
-			},
-			env_prod: {
-				"PORT": 8001,
-				"NODE_ENV": "prod",
+      },
+      env_prod: {
+        "PORT": 8001,
+        "NODE_ENV": "prod",
         "access_token": "your personal token",
-			}
-		}
-	]
+      }
+    }
+  ]
 }
 
 // centos/linux

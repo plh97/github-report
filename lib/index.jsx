@@ -12,7 +12,6 @@ import getData from './getData.js';
 
 // TODO
 // 1.css modules
-// 3.make it as my personal package
 
 export default class Github extends Component {
   constructor(props) {
