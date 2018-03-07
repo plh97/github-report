@@ -45,7 +45,7 @@ export default class Github extends Component {
     const { langColor } = this.state;
     const res = (localStorage.githubReport && JSON.parse(localStorage.githubReport)) || await getData();
     localStorage.setItem('githubReport', JSON.stringify({...res}));
-    const { viewer } = res;
+    const viewer = res.search.edges[0].node;
     this.setState({
       viewer,
       oldestRepostort: sortBy(viewer.repositories.nodes
