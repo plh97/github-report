@@ -43,7 +43,7 @@ export default class Github extends Component {
 
   async componentDidMount() {
     const { langColor } = this.state;
-    const res = (localStorage.githubReport && JSON.parse(localStorage.githubReport)) || await getData();
+    const res = (localStorage.githubReport && JSON.parse(localStorage.githubReport)) || await getData({name: this.props.name});
     localStorage.setItem('githubReport', JSON.stringify({...res}));
     const viewer = res.search.edges[0].node;
     this.setState({
