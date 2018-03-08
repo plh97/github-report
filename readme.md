@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/pengliheng/github-report.svg?branch=master)](https://travis-ci.org/pengliheng/github-report)
 [![author](https://img.shields.io/badge/author-peng-blue.svg)](https://www.penlh.com)
 [![Node.js Version](https://img.shields.io/badge/node.js-9.2.0-blue.svg)](http://nodejs.org/download)
 ![Size](https://github-size-badge.herokuapp.com/pengliheng/github-report.svg)
