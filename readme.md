@@ -5,6 +5,8 @@
 
 to generate an github report
 
+# [https://chat.pipk.top/githubReport/<userName>](https://chat.pipk.top/githubReport/pengliheng)
+
 ## 1.you need to have an router `/graphql`,and i will post request to github url `https://api.github.com/graphql`, so please paste the below code to your router(`/graphql`) config,if you wana to use.
 
 ```js
