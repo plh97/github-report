@@ -1,16 +1,17 @@
 [![author](https://img.shields.io/badge/author-peng-blue.svg)](https://www.pipk.top)
 [![Node.js Version](https://img.shields.io/badge/node.js-9.2.0-blue.svg)](http://nodejs.org/download)
 ![Size](https://github-size-badge.herokuapp.com/pengliheng/github-report.svg)
+![download](https://npmcharts.com/compare/@pengliheng/github-report?minimal=true)
 
-to generate an github report
+## to generate an github report
 
-# [实例](https://chat.pipk.top/githubReport/pengliheng)
+## [example](https://chat.pipk.top/githubReport/pengliheng)
 
 ```js
-url = 'https://chat.pipk.top/githubReport/<user name>';
+url = 'https://chat.pipk.top/githubReport/<userName>';
 ```
 
-## 1.you need to have an router `/graphql`,and i will post request to github url `https://api.github.com/graphql`, so please paste the below code to your router(`/graphql`) config,if you wana to use.
+<!-- ## 1.you need to have an router `/graphql`,and i will post request to github url `https://api.github.com/graphql`, so please paste the below code to your router(`/graphql`) config,if you wana to use.
 
 ```js
 const axios = require("axios");
@@ -31,10 +32,10 @@ exports.getCode = async ctx => {
         .catch(err => reject(err));
     });
   ctx.body = await queryFunc(query);
-};
-```
+}; -->
+<!-- ``` -->
 
-## 2.generate an [github access_token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+<!-- ## 2.generate an [github access_token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 
 * #### pay attention to avoid below thing!dont put your access token into headers,because github may think it an dangerout behave thing, and they will cancel your token immediately.
 
@@ -52,9 +53,9 @@ axios({
   .catch(err => reject(err));
 ```
 
-![](https://cdn.suisuijiang.com/message_1520156894273.png)
+![](https://cdn.suisuijiang.com/message_1520156894273.png) -->
 
-## 3.to set environment variable
+<!-- ## 3.to set environment variable
 
 ```js
 // nodejs
@@ -86,27 +87,35 @@ module.exports = {
       }
     }
   ]
-}
+} -->
 
-// centos/linux
+<!-- // centos/linux
 // set access_token=yourToken
 // export access_token=yourToken
 // not sure just google/baidu
-```
+``` -->
 
-## 4.just use it as your react component
+## 1.just use it as your react component
 
 ```jsx
 // package
 import React, { Component } from "react";
 import Github from "@pengliheng/github-report";
+import '@pengliheng/github-report/lib/index.less';
 
-// local
-import "./index.less";
-
-export default class GithubReport extends Component {
+class Root extends Component {
   render() {
-    return <Github />;
+    return (
+      <div className="github">
+        <Github name="yinxin630"/>
+      </div>
+    );
   }
 }
+
+render(
+  <Root />,
+  document.getElementById('root'),
+);
+
 ```

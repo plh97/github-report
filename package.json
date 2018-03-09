@@ -1,10 +1,11 @@
 {
   "name": "@pengliheng/github-report",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "generate a github report",
-  "homepage": "https://www.pipk.top",
+  "homepage": "https://chat.pipk.top/githubReport/pengliheng",
   "main": "dist/index.js",
   "scripts": {
+    "test": "parcel ./example/index.html",
     "w": "webpack -w --colors --progress",
     "p": "webpack --config webpack.config.prod.js --display-error-details --progress --colors --watch",
     "build": "webpack --config webpack.config.prod.js --display-error-details --progress --colors"
@@ -24,6 +25,7 @@
     "css-loader": "^0.28.10",
     "less": "^3.0.1",
     "less-loader": "^4.0.6",
+    "path": "^0.12.7",
     "style-loader": "^0.20.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10"
@@ -33,7 +35,6 @@
     "chart.js": "^2.7.2",
     "github-calendar": "^1.2.1",
     "lodash.sortby": "^4.7.0",
-    "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
