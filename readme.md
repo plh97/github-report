@@ -119,3 +119,44 @@ render(
 );
 
 ```
+
+```js
+axios({
+  url: 'https://chat.pipk.top/graphql',
+  method: 'post',
+  // url: `https://api.github.com/graphql`,
+  // method: 'post',
+  // headers: {
+  //   'Authorization': `bearer ${process.env.access_token}`,
+  //   'Content-Type': 'application/json'
+  // },
+  data: {
+    query: `{
+      search(query: "${args.name||'pengliheng'}", type: USER, first: 1) {    
+        edges {
+          node {
+            ... on User {
+              avatarUrl login bio url createdAt
+              contributedRepositories(first: 100,orderBy: {field: CREATED_AT, direction: DESC}) {
+                totalCount
+                nodes{
+                  nameWithOwner url
+                }
+              }
+              starredRepositories(first:100) {
+                nodes {
+                  primaryLanguage {
+                    name color
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }`,
+  },
+}).then(res => resolve(res.data.data))
+  .catch(err => reject(err))
+})
+```
