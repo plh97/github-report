@@ -86,6 +86,9 @@
                 &:before,&:after {
                     content:none;
                 }
+                a {
+                    font-size: inherit;
+                }
                 .contrib-legend {
                     display: inline-flex;
                     flex-direction: row;
@@ -162,6 +165,10 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: flex-start;
+                p{
+                    text-indent: 0;
+                    margin: 0;
+                }
             }
         }
         .repositories,.followers, .following {
@@ -169,7 +176,7 @@
                 grid-column: ~"1 / 4";
             }
             background-color: green;
-            width: 80%;
+            width: 55%;
             margin: 1rem auto;
             text-align: center;
             color: rgb(255, 255, 255);
@@ -304,11 +311,11 @@
             }            
 
             img {
-                width: 73px;
-                height: 73px;
+                max-width: 100%;
                 border-radius: 50%;
                 border: 2px solid #a0dc70;
                 padding: 1px;
+                box-sizing: border-box;
             }
             .name {
                 text-decoration: none;
