@@ -97,7 +97,7 @@ module.exports = {
 
 ## 1.just use it as your react component
 
-```jsx
+<!-- ```jsx
 // package
 import React, { Component } from "react";
 import Github from "@pengliheng/github-report";
@@ -117,10 +117,22 @@ render(
   <Root />,
   document.getElementById('root'),
 );
+``` -->
+
+## you can input it while your router change
+```jsx
+const GithubReport = props => (
+  <div className="github-report">
+    <Github {...props} />
+  </div>
+);
+
+// router 
+<Route path="/githubReport/:name" component={GithubReport} />
 
 ```
 
-```js
+<!-- ```js
 axios({
   url: 'https://chat.pipk.top/graphql',
   method: 'post',
@@ -159,4 +171,4 @@ axios({
 }).then(res => resolve(res.data.data))
   .catch(err => reject(err))
 })
-```
+``` -->
