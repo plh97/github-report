@@ -1,6 +1,6 @@
 {
   "name": "@pengliheng/github-report",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "description": "generate a github report",
   "homepage": "https://chat.pipk.top/githubReport/pengliheng",
   "main": "dist/index.js",
