@@ -2,14 +2,14 @@
 [![Node.js Version](https://img.shields.io/badge/node.js-9.2.0-blue.svg)](http://nodejs.org/download)
 ![Size](https://github-size-badge.herokuapp.com/pengliheng/github-report.svg)
 
-## to generate an github report
+### to generate an github report
 
-## [example](https://chat.pipk.top/githubReport/pengliheng)
+### [example](https://chat.pipk.top/githubReport/pengliheng)
 
 ```js
 url = 'https://chat.pipk.top/githubReport/<userName>';
 ```
-
+![](https://static.pipk.top/api/public/images/8536904566607304.png)
 <!-- ## 1.you need to have an router `/graphql`,and i will post request to github url `https://api.github.com/graphql`, so please paste the below code to your router(`/graphql`) config,if you wana to use.
 
 ```js
@@ -94,7 +94,7 @@ module.exports = {
 // not sure just google/baidu
 ``` -->
 
-## 1.just use it as your react component
+### 1.just use it as your react component
 
 <!-- ```jsx
 // package
@@ -118,7 +118,7 @@ render(
 );
 ``` -->
 
-## you can input it while your router change
+### you can input it while your router change
 ```jsx
 const GithubReport = props => (
   <div className="github-report">
