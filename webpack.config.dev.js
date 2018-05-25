@@ -4,17 +4,25 @@ const webpack = require('webpack');
 module.exports = {
   entry: path.join(__dirname, 'lib', 'index.jsx'),
   output: {
-    filename: 'index.js'
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js',
+    libraryTarget: 'umd'
+  },
+  mode: 'development',
+  externals: {
+    react: 'react'
   },
   module: {
-    rules: [{
-      test: /(\.less|\.css)$/,
-      use: ['css-loader', 'less-loader'],
-    }, {
-      test: /\.(js|jsx)$/,
-      exclude: /node_module/,
-      loader: 'babel-loader',
-    }],
-  },
-  mode: 'development'
+    rules: [
+      {
+        test: /\.(jsx|js)?$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules|bower_components)/
+      }, {
+		    test: /\.less$/,
+	      use: ['css-loader', 'less-loader'],
+        // use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
 };

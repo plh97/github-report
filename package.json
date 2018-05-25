@@ -1,13 +1,15 @@
 {
   "name": "@pengliheng/github-report",
-  "version": "1.4.3",
+  "version": "1.5.6",
   "description": "generate a github report",
   "homepage": "https://chat.pipk.top/githubReport/pengliheng",
   "main": "dist/index.js",
   "scripts": {
+    "pu": "npm publish --access-public",
     "test": "parcel ./example/index.html",
     "w": "webpack -w --colors --progress",
     "p": "webpack --config webpack.config.prod.js --display-error-details --progress --colors --watch",
+    "b": "webpack --config webpack.config.dev.js --display-error-details --progress --colors",
     "build": "webpack --config webpack.config.prod.js --display-error-details --progress --colors"
   },
   "repository": {

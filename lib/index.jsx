@@ -44,8 +44,8 @@ export default class Github extends Component {
   async componentDidMount() {
     const { match } = this.props;
     const name = (match && match.params.name) || 'pengliheng';
-    const res = (localStorage[name] && JSON.parse(localStorage[name])) || await getData({ name });
-    localStorage.setItem(name, JSON.stringify({ ...res }));
+    const res = (sessionStorage[name] && JSON.parse(sessionStorage[name])) || await getData({ name });
+    sessionStorage.setItem(name, JSON.stringify(res));
     this.initGitRepo(res);
     setTimeout(() => {
       calendar(this.container, name);
@@ -57,79 +57,16 @@ export default class Github extends Component {
     this.setState({
       starredLanguage: undefined,
     });
-    const res = (localStorage[name] && JSON.parse(localStorage[name])) || await getData({ name });
-    localStorage.setItem(name, JSON.stringify({ ...res }));
+    const res = (sessionStorage[name] && JSON.parse(sessionStorage[name])) || await getData({ name });
+    sessionStorage.setItem(name, JSON.stringify(res));
     this.initGitRepo(res);
     setTimeout(() => {
       calendar(this.container, name);
     }, 0);
   }
-
-  // getData({ name }) {
-  //   return new Promise((resolve, reject) => {
-  //     axios({
-  //       url: '/graphql',
-  //       method: 'post',
-  //       data: {
-  //         query: `{
-  //           search(query: "${name || 'pengliheng'}", type: USER, first: 1) {    
-  //             edges {
-  //               node {
-  //                 ... on User {
-  //                   avatarUrl login bio url createdAt
-  //                   contributedRepositories(first: 100,orderBy: {field: CREATED_AT, direction: DESC}) {
-  //                     totalCount
-  //                     nodes{
-  //                       nameWithOwner url
-  //                     }
-  //                   }
-  //                   starredRepositories(first:100) {
-  //                     nodes {
-  //                       primaryLanguage {
-  //                         name color
-  //                       }
-  //                     }
-  //                   }
-  //                   followers(first: 100) {
-  //                     totalCount
-  //                     nodes {
-  //                       url name avatarUrl login
-  //                     }
-  //                   }
-  //                   following(first: 100) {
-  //                     totalCount
-  //                     nodes {
-  //                       url name avatarUrl login
-  //                     }
-  //                   }
-  //                   repositories(first:100,orderBy: {field: STARGAZERS, direction: DESC}){
-  //                     totalCount
-  //                     nodes{
-  //                       createdAt updatedAt isFork name url
-  //                       primaryLanguage {
-  //                         name
-  //                       }
-  //                       forks(first:0){
-  //                         totalCount
-  //                       }
-  //                       stargazers(first:0){
-  //                         totalCount
-  //                       }
-  //                     }
-  //                   }
-  //                 }
-  //               }
-  //             }
-  //           }
-  //         }`,
-  //       },
-  //     }).then(res => resolve(res.data.data))
-  //       .catch(err => reject(err));
-  //   });
-  // }
   initGitRepo(res) {
     const { langColor } = this.state;
-    const viewer = res.search.edges[0].node;
+    const viewer = res.data.search.edges[0].node;
     this.setState({
       viewer,
       oldestRepostort: sortBy(viewer.repositories.nodes
