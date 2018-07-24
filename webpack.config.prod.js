@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'lib', 'index.jsx'),
@@ -19,10 +19,21 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/
       }, {
-		    test: /\.less$/,
-	      use: ['css-loader', 'less-loader'],
+        test: /(\.less|\.css)$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [ 'css-loader', 'postcss-loader', 'less-loader'],
+        }),
         // use: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('index.css')
+  ],
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+    },
+  },
 };

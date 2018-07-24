@@ -109,8 +109,9 @@ export default class Github extends Component {
     const {
       viewer, oldestRepostort, starredLanguage,
     } = this.state;
-    const { match } = this.props;
-    const url = match.path.match(/.*(?=:)/)[0];
+    const { match,name } = this.props;
+    const url = name;
+    
     return starredLanguage ? (
       <div className="github">
         <h2 className="title">活跃度</h2>
@@ -265,8 +266,8 @@ export default class Github extends Component {
             />
           </div>
           <div className="repository-contribute">
-            <h2 className="title">参与贡献了{viewer.contributedRepositories.totalCount}个项目</h2>
-            {viewer.contributedRepositories.nodes.map((repo, i) => (
+            <h2 className="title">参与贡献了{viewer.repositoriesContributedTo.totalCount}个项目</h2>
+            {viewer.repositoriesContributedTo.nodes.map((repo, i) => (
               <a target="_blank" className="list" key={i} href={repo.url}>@{repo.nameWithOwner}</a>
             ))}
           </div>
