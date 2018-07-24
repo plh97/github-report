@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"'use strict';\n\nmodule.exports = function(Chart) {\n\n\tChart.Bubble = function(context, config) {\n\t\tconfig.type = 'bubble';\n\t\treturn new Chart(context, config);\n\t};\n\n};\n"},"hash":"ef136a3c258907a12484d103bdcd0e85"}

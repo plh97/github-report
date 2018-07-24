@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"'use strict';\n\nmodule.exports = function(Chart) {\n\n\tChart.PolarArea = function(context, config) {\n\t\tconfig.type = 'polarArea';\n\n\t\treturn new Chart(context, config);\n\t};\n\n};\n"},"hash":"b1de0e1f08ac98d5f7de8a31b7aec3a6"}

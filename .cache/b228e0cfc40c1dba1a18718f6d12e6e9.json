@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"'use strict';\n\nmodule.exports = function(Chart) {\n\n\tChart.Doughnut = function(context, config) {\n\t\tconfig.type = 'doughnut';\n\n\t\treturn new Chart(context, config);\n\t};\n\n};\n"},"hash":"f39cb50262613aef9e5ca5938ef1a44f"}

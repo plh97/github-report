@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"'use strict';\n\nmodule.exports = function(Chart) {\n\n\tChart.Bar = function(context, config) {\n\t\tconfig.type = 'bar';\n\n\t\treturn new Chart(context, config);\n\t};\n\n};\n"},"hash":"613bfe71fa4d6913217d10ad7a5a52ab"}

@@ -110,8 +110,7 @@ export default class Github extends Component {
       viewer, oldestRepostort, starredLanguage,
     } = this.state;
     const { match,name } = this.props;
-    const url = name;
-    
+    const url = match.path.match(/.*(?=:)/)[0];
     return starredLanguage ? (
       <div className="github">
         <h2 className="title">活跃度</h2>
