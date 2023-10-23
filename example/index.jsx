@@ -8,9 +8,9 @@ import Github from "../lib/index.jsx";
 export default class Root extends Component {
   render() {
     return (
-		<div className="github">
-      <Github name="yinxin630"/>
-		</div>
+      <div className="github">
+        <Github name="yinxin630"/>
+      </div>
     );
   }
 }
